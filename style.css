@@ -34,10 +34,11 @@ header {
 }
 
 .wrapper .body-text {
-  padding: 50px 9px 50px 50px;
+  padding: 40px 20px 50px 40px;
   grid-column: span 12;
   background-color: #fff;
   border-radius: 0 100px;
+  margin-bottom: 40px;
 }
 .wrapper .body-text p, a{
   font-family: 'Neucha', cursive;
