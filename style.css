@@ -26,16 +26,15 @@ header {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
 }
 
 .wrapper {
-  max-width: 360px;
-  margin: 40px;
+  width: calc( 100% - 80px);
+
 }
 
 .wrapper .body-text {
-  padding: 50px 39px 21px 21px;
+  padding: 50px 9px 50px 50px;
   grid-column: span 12;
   background-color: #fff;
   border-radius: 0 100px;
@@ -48,7 +47,19 @@ header {
   text-align: left;
   margin-bottom: 30px;
 }
-
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.clipped {
+  width: 100%;
+  height: 350px;
+  background: turquoise url(https://source.unsplash.com/600x600?summer);
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+}
 .wrapper .body-text h2 {
   font-size: 30px;
   color: #3E7531;
@@ -58,24 +69,34 @@ header {
 }
 
 .wrapper .body-text h1{
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   color: #3E7531;
   font-family: GardenGrown;
   text-align: left;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 section.body {
-  margin-top: 49px;
   background: radial-gradient(closest-side at 49% 50%, #F5D839 0%, #D95A0D 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 49px;
+}
+
+@media only screen and (min-width: 768px){
+  .wrapper .body-text h1{
+    font-size: 45px;
+  }
 }
 
 @media only screen and (min-width:960px){
+
+  .grid {
+    gap: 30px;
+  }
   .wrapper {
     max-width: 1240px;
     margin: 0 auto;
@@ -95,7 +116,6 @@ section.body {
   section.body {
     margin-top: 30px;
     padding: 60px;
-    background: radial-gradient(closest-side at 49% 50%, #F5D839 0%, #D95A0D 100%);
   }
 }
 
